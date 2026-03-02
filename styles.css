@@ -1,95 +1,514 @@
-.intro {
-    padding-top: 20px;
-    padding-bottom: 20px;
+/* =============================================
+   EAG Autos, LLC — styles.css (Improved)
+   ============================================= */
+
+/* --- CSS Variables --- */
+:root {
+    --black: #0d0d0d;
+    --white: #f5f2ee;
+    --gold: #c9a84c;
+    --gold-light: #e8cb7f;
+    --purple-deep: #1a0a2e;
+    --purple-mid: #2d1654;
+    --card-bg: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #666;
+    --badge-luxury: #c9a84c;
+    --badge-economy: #4a9e6b;
+    --badge-suv: #3a7dca;
+    --badge-sport: #c94a4a;
+    --radius: 12px;
+    --shadow: 0 8px 40px rgba(0,0,0,0.12);
+    --transition: all 0.3s ease;
 }
 
-.intro {
-    position: relative;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("https://yeahthatskosher.com/wp-content/uploads/2021/07/Road-Trip-Green-Fields-Trees-Car-1024x709.jpg");
-}
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
-    background-color: rgb(79, 50, 107);
+    background-color: var(--purple-deep);
+    color: var(--text-dark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.mercedes {
-    text-align: center;
-    text-decoration: double;
-    width: 100%;
-    padding-top: 40px;
-    background-image: url("");
+/* =============================================
+   NAVBAR
+   ============================================= */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 40px;
+    background: rgba(13, 5, 30, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
 }
 
-.volkswagen {
-    text-align: center;
-    text-decoration: double;
-    width: 100%;
-    padding-top: 40px;
-    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
-    background-image: url("");
+.nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    letter-spacing: 0.04em;
 }
 
-h1 {
-    text-align: center;
-    padding-top: 20px;
-    text-decoration: wavy;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-image: url("/Photos/Header\ Photos/car_driving_across_country_cropped.jpg");
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
 }
 
-h2 {
-    text-align: center;
-    padding-top: 20px;
-    text-decoration: wavy;
-    font-size: medium;
-    font-family: cursive;
+.nav-links a {
+    color: rgba(245, 242, 238, 0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: var(--transition);
 }
 
-.cclass_description {
-    margin: 1px;
-    padding-bottom: 20px;
-    text-align:center
+.nav-links a:hover { color: var(--gold); }
 
-}
-.cclass_description {
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-weight: bold;
-    background-color: blueviolet;
-}
+.hamburger { display: none; color: var(--gold); font-size: 1.5rem; cursor: pointer; }
 
-
-.passat_description {
-    margin: 1px;
-    padding-bottom: 20px;
-    text-align: justify;
-    color:black;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    background-color: blueviolet
-}
-
-.mercedes-photos {
-    background-image: url("https://www.funinfairfaxva.com/wp-content/uploads/2020/10/Hunt-Country-Drive-The-Plains-Fall.jpg");
-
-}
-
-.passat_photos {
-    background-image: url("https://www.funinfairfaxva.com/wp-content/uploads/2022/04/Georgetown-Pike-scenic-drive-Northern-VA-1024x768.jpg")
-}
-
-a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-foot {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    text-align: center;
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
     position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("https://yeahthatskosher.com/wp-content/uploads/2021/07/Road-Trip-Green-Fields-Trees-Car-1024x709.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(13,5,30,0.75) 0%, rgba(26,6,46,0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    padding: 0 24px;
+    animation: heroFadeUp 1s ease both;
+}
+
+.hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.hero-sub {
+    font-size: 1.05rem;
+    color: rgba(245, 242, 238, 0.8);
+    margin-bottom: 36px;
+    max-width: 480px;
+    margin-inline: auto;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: var(--transition);
+}
+
+.hero-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(201, 168, 76, 0.4);
+}
+
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   FLEET SECTION
+   ============================================= */
+.fleet-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-title.light { color: var(--white); }
+
+.section-sub {
+    text-align: center;
+    color: rgba(245,242,238,0.6);
+    margin-bottom: 56px;
+    font-size: 0.95rem;
+}
+
+.section-sub a { color: var(--gold); text-decoration: none; }
+.section-sub a:hover { text-decoration: underline; }
+
+/* =============================================
+   VEHICLE CARD
+   ============================================= */
+.vehicle-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.vehicle-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Gallery ===== */
+.vehicle-gallery {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+}
+
+.gallery-main {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-main img:hover { transform: scale(1.03); }
+
+.gallery-thumbs {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: #1a1a1a;
+    flex-wrap: wrap;
+}
+
+.gallery-thumbs img {
+    flex: 1 0 18%;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.gallery-thumbs img:hover {
+    opacity: 1;
+    border-color: var(--gold);
+}
+
+/* ===== Vehicle Info ===== */
+.vehicle-info {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.vehicle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.vehicle-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.vehicle-badge.luxury  { background: var(--badge-luxury); color: var(--black); }
+.vehicle-badge.economy { background: var(--badge-economy); }
+.vehicle-badge.suv     { background: var(--badge-suv); }
+.vehicle-badge.sport   { background: var(--badge-sport); }
+
+.vehicle-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.vehicle-tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.vehicle-price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple-mid);
+}
+
+.price-unit {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ===== Spec Grid ===== */
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.spec-icon { font-size: 1rem; }
+
+/* ===== Full Specs ===== */
+.full-specs {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.full-specs summary {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--purple-mid);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+.full-specs summary::-webkit-details-marker { display: none; }
+.full-specs summary::before { content: '+ '; }
+details[open] summary::before { content: '− '; }
+
+.full-specs p {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ===== Actions ===== */
+.vehicle-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-book {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    background: var(--purple-mid);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    min-width: 130px;
+}
+
+.btn-book:hover {
+    background: var(--purple-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(45, 22, 84, 0.35);
+}
+
+.btn-contact {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--purple-mid);
+    border: 2px solid var(--purple-mid);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    min-width: 130px;
+}
+
+.btn-contact:hover {
+    background: var(--purple-mid);
+    color: #fff;
+}
+
+/* =============================================
+   CONTACT SECTION
+   ============================================= */
+.contact-section {
+    background: var(--purple-mid);
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    min-width: 200px;
+    flex: 1;
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+}
+
+.contact-icon { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+
+.contact-card h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.contact-card p, .contact-card a {
+    color: rgba(245,242,238,0.8);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.contact-card a:hover { color: var(--gold); }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+    background: var(--black);
+    color: rgba(245,242,238,0.5);
+    text-align: center;
+    padding: 36px 24px;
+    font-size: 0.85rem;
+    line-height: 2;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.footer-copy { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+    .site-nav { padding: 14px 20px; }
+    .nav-links { display: none; gap: 16px; flex-direction: column; }
+    .hamburger { display: block; }
+
+    .vehicle-card {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-info { padding: 24px 20px; }
+
+    .spec-grid { grid-template-columns: 1fr; }
+
+    .hero { background-attachment: scroll; }
+
+    .contact-grid { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    .vehicle-header { flex-direction: column; }
+    .vehicle-price { text-align: left; }
+    .price-amount { font-size: 1.6rem; }
 }
