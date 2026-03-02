@@ -1,115 +1,254 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <title>EAG Autos, LLC</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EAG Autos, LLC – Philadelphia Car Rentals</title>
+    <meta name="description" content="Rent premium and economy vehicles in Philadelphia, PA. EAG Autos offers luxury and affordable car rentals in the Wynnefield area." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <body>
-        <div class="container_fluid">
-            <div class="header-elements">
-                <div class="intro">
-                    <h1 class="header_text">EAG Autos, LLC</h1>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="site-nav">
+        <span class="nav-brand">EAG Autos, LLC</span>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+        <!-- Mobile hamburger (CSS-only toggle) -->
+        <label class="hamburger" for="nav-toggle">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" hidden />
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Philadelphia, PA · Wynnefield</p>
+            <h1 class="hero-title">Drive Something <em>Remarkable</em></h1>
+            <p class="hero-sub">Luxury &amp; economy vehicles available for rent — directly from the owner. No hidden fees.</p>
+            <a href="#fleet" class="hero-cta">Browse the Fleet</a>
+        </div>
+    </header>
+
+    <!-- ===== FLEET ===== -->
+    <main id="fleet" class="fleet-section">
+        <h2 class="section-title">Available Vehicles</h2>
+        <p class="section-sub">Click <strong>Book on Turo</strong> to reserve, or <a href="#contact">contact us directly</a> for a deal.</p>
+
+        <!-- ===== VEHICLE CARD: Mercedes C300 ===== -->
+        <article class="vehicle-card" id="mercedes">
+            <div class="vehicle-gallery">
+                <div class="gallery-main">
+                    <img id="merc-main" src="https://images.turo.com/media/vehicle/images/WxvTSs8wQoW7xK27rRokDQ.1440x700.jpg" alt="2020 Mercedes-Benz C300 exterior" />
                 </div>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#car-list">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#location">Location</a>
-                    </li>
-                  </ul>
+                <div class="gallery-thumbs">
+                    <img src="https://images.turo.com/media/vehicle/images/WxvTSs8wQoW7xK27rRokDQ.1440x700.jpg" alt="Mercedes C300 front" onclick="swapImg('merc-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/tHCY48CLT-KkPvOg4OYkdQ.1440x700.jpg" alt="Mercedes C300 interior" onclick="swapImg('merc-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/6-1czI2bSeWf9G89PEMkdw.1440x700.jpg" alt="Mercedes C300 side" onclick="swapImg('merc-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/ZnXz7iefQ3iPXfl5fMx9Jg.1440x700.jpg" alt="Mercedes C300 rear" onclick="swapImg('merc-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/Te95THqFQEqvy_x1DZAZIw.1440x700.jpg" alt="Mercedes C300 dashboard" onclick="swapImg('merc-main', this.src)" />
+                </div>
             </div>
-            <div class="mercedes" id="car-list">
-                <h2>Mercedes Benz C-Class</h2>
-                <p class="cclass_description">Compact luxury sedan. In-car Wi-Fi. Leatherette seats. Heated front seats.
-                    Heated steering wheel. Power driver seat. Power passenger seat. 8.3 inch display.
-                    Traction control. Keyless entry and Keyless GO.
-                    Five different driving modes: Sport, Sport+, Comfort, Eco and Individual. Panoramic sunroof.
-                    TouchPad. Voice command. Large trunk capacity and folding back seats.
-                    All-wheel-drive(4Matic.) 24 City, 31 Highway.
-                    27.5 miles per gallon combined. Navigation system. LED Lights. Run flat tires.
-                    Premium package. Overhead airbags. Rear defroster.
-                    Power mirrors. Turbo Charged Engine. ABS Brakes. Satellite Radio Ready. SiriusXM.
-                    Cruise Control.
-                </p>
-                <div class="mercedes-photos">
-                    <img src="https://images.turo.com/media/vehicle/images/WxvTSs8wQoW7xK27rRokDQ.1440x700.jpg" alt="mercedes" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/tHCY48CLT-KkPvOg4OYkdQ.1440x700.jpg" alt="mercedes" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/6-1czI2bSeWf9G89PEMkdw.1440x700.jpg" alt="mercedes" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/ZnXz7iefQ3iPXfl5fMx9Jg.1440x700.jpg" alt="mercedes" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/Te95THqFQEqvy_x1DZAZIw.1440x700.jpg" alt="mercedes" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/6-1czI2bSeWf9G89PEMkdw.1440x700.jpg" alt="mercedes" width="400" height="200" />
+            <div class="vehicle-info">
+                <div class="vehicle-header">
+                    <div>
+                        <span class="vehicle-badge luxury">Luxury</span>
+                        <h3 class="vehicle-name">2016  Mercedes-Benz C300 4Matic</h3>
+                        <p class="vehicle-tagline">Compact Luxury Sedan · AWD 4Matic</p>
+                    </div>
+                    <div class="vehicle-price">
+                        <span class="price-amount">~$60</span>
+                        <span class="price-unit">/day</span>
+                    </div>
                 </div>
 
-                <div type="button" class="btn btn-outline-primary btn-lg">
-                    <a href="https://turo.com/us/en/car-rental/united-states/bala-cynwyd-pa/mercedes-benz/c-class/1112683" target="_blank">Book</a>
+                <div class="spec-grid">
+                    <div class="spec-item"><span class="spec-icon">⚡</span><span>Turbocharged Engine</span></div>
+                    <div class="spec-item"><span class="spec-icon">🌡</span><span>Heated Seats &amp; Wheel</span></div>
+                    <div class="spec-item"><span class="spec-icon">☀️</span><span>Panoramic Sunroof</span></div>
+                    <div class="spec-item"><span class="spec-icon">📡</span><span>In-Car Wi-Fi</span></div>
+                    <div class="spec-item"><span class="spec-icon">🗺</span><span>Navigation System</span></div>
+                    <div class="spec-item"><span class="spec-icon">🔑</span><span>Keyless GO Entry</span></div>
+                    <div class="spec-item"><span class="spec-icon">🛞</span><span>Run-Flat Tires</span></div>
+                    <div class="spec-item"><span class="spec-icon">🎵</span><span>SiriusXM Radio</span></div>
+                </div>
+
+                <details class="full-specs">
+                    <summary>Full Feature List</summary>
+                    <p>Leatherette seats · 8.3" display · TouchPad · Voice Command · 5 Drive Modes (Sport, Sport+, Comfort, Eco, Individual) · Power driver &amp; passenger seats · Dual power mirrors · LED lights · Overhead airbags · Rear defroster · ABS brakes · Cruise control · Folding rear seats · Large trunk · 24 city / 31 hwy MPG</p>
+                </details>
+
+                <div class="vehicle-actions">
+                    <a href="https://turo.com/us/en/car-rental/united-states/bala-cynwyd-pa/mercedes-benz/c-class/1112683" target="_blank" rel="noopener" class="btn-book">Book on Turo</a>
+                    <a href="#contact" class="btn-contact">Contact Owner</a>
                 </div>
             </div>
-            <div class="volkswagen">
-                <h2>Volkswagen Passat S</h2>
-                <p class="passat_description">Mid-size economy sedan.
-                    Power Windows. Good sound system. Large trunk capacity.
-                    Comfy seats with enough leg space.
-                    AM/FM stereo radio with auxiliary audio jack
-                    Air Conditioning: Dual-zone auto climate control
-                    Antenna: Windows mounted diversity antenna
-                    Navigation System (option)
-                    6 speakers
-                    Passenger Vanity Mirror
-                    Illuminated front passenger-side vanity mirror
-                    Power Door Locks
-                    Fender 400-watt sound system
-                    Front and rear reading lights
-                    Remote Audio Controls
-                    Multifunction steering wheel
-                    Single CD
-                    CD/MP3 player
-                    Satellite radio integrated
-                    Steering Wheel Adjustment
-                    Tilt and telescopic steering wheel
-                    Trunk Light
-                    Cargo area light
-                    Voice Recognition System: Voice activation
-                </p>
-                <div class="passat_photos">
-                    <img src="https://images.turo.com/media/vehicle/images/vs0W1En6Q_ikaGT4gTegnA.1440x700.jpg" alt="volkswagen" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/3LUhiZ6QT8OSKvjBGkShGw.1440x700.jpg" alt="volkswagen" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/1j9p6UtZTTSfmL65xasO0A.1440x700.jpg" alt="volkswagen" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/lE5hjvRBSdC5tGVltTkYUQ.1440x700.jpg" alt="volkswagen" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/GJCmfsS7TVKnwVZPkyoi8Q.1440x700.jpg" alt="volkswagen" width="400" height="200" />
-                    <img src="https://images.turo.com/media/vehicle/images/tE4viGO_Tmy1o3bzgPqV2Q.1440x700.jpg" alt="volkswagen" width="400" height="200" />
+        </article>
+
+        <!-- ===== VEHICLE CARD: Volkswagen Passat ===== -->
+        <article class="vehicle-card" id="passat">
+            <div class="vehicle-gallery">
+                <div class="gallery-main">
+                    <img id="vw-main" src="https://images.turo.com/media/vehicle/images/vs0W1En6Q_ikaGT4gTegnA.1440x700.jpg" alt="Volkswagen Passat S exterior" />
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="https://images.turo.com/media/vehicle/images/vs0W1En6Q_ikaGT4gTegnA.1440x700.jpg" alt="Passat front" onclick="swapImg('vw-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/3LUhiZ6QT8OSKvjBGkShGw.1440x700.jpg" alt="Passat interior" onclick="swapImg('vw-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/1j9p6UtZTTSfmL65xasO0A.1440x700.jpg" alt="Passat side" onclick="swapImg('vw-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/lE5hjvRBSdC5tGVltTkYUQ.1440x700.jpg" alt="Passat rear" onclick="swapImg('vw-main', this.src)" />
+                    <img src="https://images.turo.com/media/vehicle/images/GJCmfsS7TVKnwVZPkyoi8Q.1440x700.jpg" alt="Passat trunk" onclick="swapImg('vw-main', this.src)" />
+                </div>
+            </div>
+            <div class="vehicle-info">
+                <div class="vehicle-header">
+                    <div>
+                        <span class="vehicle-badge economy">Economy</span>
+                        <h3 class="vehicle-name">Volkswagen Passat S</h3>
+                        <p class="vehicle-tagline">Mid-Size Sedan · Great Value</p>
+                    </div>
+                    <div class="vehicle-price">
+                        <span class="price-amount">~$45</span>
+                        <span class="price-unit">/day</span>
+                    </div>
                 </div>
 
-                <div type="button" class="btn btn-outline-primary btn-lg">
-                    <a href="https://turo.com/us/en/car-rental/united-states/bala-cynwyd-pa/volkswagen/passat/862696" target="_blank">Book</a>
+                <div class="spec-grid">
+                    <div class="spec-item"><span class="spec-icon">❄️</span><span>Dual-Zone Climate</span></div>
+                    <div class="spec-item"><span class="spec-icon">🔊</span><span>Fender 400W Audio</span></div>
+                    <div class="spec-item"><span class="spec-icon">🎙</span><span>Voice Recognition</span></div>
+                    <div class="spec-item"><span class="spec-icon">📻</span><span>Satellite Radio</span></div>
+                    <div class="spec-item"><span class="spec-icon">🧭</span><span>Navigation (Option)</span></div>
+                    <div class="spec-item"><span class="spec-icon">🦺</span><span>Power Door Locks</span></div>
                 </div>
+
+                <details class="full-specs">
+                    <summary>Full Feature List</summary>
+                    <p>Power windows · AM/FM + AUX jack · 6 speakers · Passenger vanity mirror · Remote audio controls · Multifunction steering wheel · CD/MP3 player · Tilt &amp; telescopic steering · Trunk light · Large trunk · Comfortable rear legroom</p>
+                </details>
+
+                <div class="vehicle-actions">
+                    <a href="https://turo.com/us/en/car-rental/united-states/bala-cynwyd-pa/volkswagen/passat/862696" target="_blank" rel="noopener" class="btn-book">Book on Turo</a>
+                    <a href="#contact" class="btn-contact">Contact Owner</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== VEHICLE CARD TEMPLATE: New Vehicle ===== -->
+        <!-- 
+            =====================================================
+            NEW VEHICLE TEMPLATE — Copy this block for each new car.
+            Replace all placeholder values marked with [BRACKETS].
+            =====================================================
+        -->
+        <article class="vehicle-card" id="[vehicle-id]">
+            <div class="vehicle-gallery">
+                <div class="gallery-main">
+                    <img id="[img-id]-main" src="[MAIN_PHOTO_URL]" alt="[YEAR MAKE MODEL] exterior" />
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="[PHOTO_URL_1]" alt="[Car name] view 1" onclick="swapImg('[img-id]-main', this.src)" />
+                    <img src="[PHOTO_URL_2]" alt="[Car name] view 2" onclick="swapImg('[img-id]-main', this.src)" />
+                    <img src="[PHOTO_URL_3]" alt="[Car name] view 3" onclick="swapImg('[img-id]-main', this.src)" />
+                    <img src="[PHOTO_URL_4]" alt="[Car name] view 4" onclick="swapImg('[img-id]-main', this.src)" />
+                    <img src="[PHOTO_URL_5]" alt="[Car name] view 5" onclick="swapImg('[img-id]-main', this.src)" />
+                </div>
+            </div>
+            <div class="vehicle-info">
+                <div class="vehicle-header">
+                    <div>
+                        <!-- Badge options: luxury | economy | suv | sport -->
+                        <span class="vehicle-badge [luxury|economy|suv|sport]">[Luxury / Economy / SUV / Sport]</span>
+                        <h3 class="vehicle-name">2020 Mercedes-Benz C300</h3>
+                        <p class="vehicle-tagline">Sedan · [Drivetrain or Key Feature]</p>
+                    </div>
+                    <div class="vehicle-price">
+                        <span class="price-amount">~$65</span>
+                        <span class="price-unit">/day</span>
+                    </div>
+                </div>
+
+               <div class="spec-grid">
+                    <div class="spec-item"><span class="spec-icon">📱</span><span>Apple CarPlay &amp; Android Auto</span></div>
+                    <div class="spec-item"><span class="spec-icon">🌡</span><span>Front Seat Heaters</span></div>
+                    <div class="spec-item"><span class="spec-icon">☀️</span><span>Panoramic Sunroof</span></div>
+                    <div class="spec-item"><span class="spec-icon">🎵</span><span>Burmester Premium Audio</span></div>
+                    <div class="spec-item"><span class="spec-icon">🅿️</span><span>Automated Parking &amp; Sensors</span></div>
+                    <div class="spec-item"><span class="spec-icon">👁</span><span>Blind Spot Monitor</span></div>
+                    <div class="spec-item"><span class="spec-icon">📡</span><span>Wi-Fi Hotspot</span></div>
+                    <div class="spec-item"><span class="spec-icon">🔑</span><span>Smart Key &amp; Memory Seats</span></div>
+                </div>
+
+                <details class="full-specs">
+                    <summary>Full Feature List</summary>
+                    <p>[Full comma-separated feature list goes here]</p>
+                </details>
+
+                <div class="vehicle-actions">
+                    <a href="https://turo.com/us/en/car-rental/united-states/philadelphia-pa/mercedes-benz/c-class/3591378" target="_blank" rel="noopener" class="btn-book">Book on Turo</a>
+                    <a href="#contact" class="btn-contact">Contact Owner</a>
+                </div>
+            </div>
+        </article>
+        <!-- ===== END NEW VEHICLE TEMPLATE ===== -->
+
+    </main>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title light">Get in Touch</h2>
+        <p class="section-sub light">Prefer to book directly? Reach out and skip the platform fees.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="contact-icon">📍</span>
+                <h4>Location</h4>
+                <p>Wynnefield, Philadelphia, PA 19131</p>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">✉️</span>
+                <h4>Email</h4>
+                <p><a href="mailto:eagandong00@gmail.com">[YOUR EMAIL]</a></p>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">📞</span>
+                <h4>Phone / Text</h4>
+                <p><a href="tel:443-649-7679">[YOUR PHONE]</a></p>
             </div>
         </div>
-    <script src="index.js" charset="utf-8"></script>
-    </body>
-    <footer>
-        <div class="foot">
-            <div id="location">
-              <p>EAG Autos, LLC</p>
-              <p>Philadelphia, PA 19131</p>
-            </div>
-        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="location" class="site-footer">
+        <p class="footer-brand">EAG Autos, LLC</p>
+        <p>Philadelphia, PA 19131 &nbsp;·&nbsp; Wynnefield</p>
+        <p class="footer-copy">&copy; <span id="year"></span> EAG Autos, LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Photo gallery swap
+        function swapImg(mainId, src) {
+            document.getElementById(mainId).src = src;
+        }
+
+        // Fade-in on scroll
+        const cards = document.querySelectorAll('.vehicle-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        cards.forEach(c => observer.observe(c));
+    </script>
+</body>
 </html>
-
-<! -- Use class and id tags alternatively, background images for each section -->
-
-
-
