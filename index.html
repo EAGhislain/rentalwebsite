@@ -44,8 +44,76 @@
         <h2 class="section-title">Available Vehicles</h2>
         <p class="section-sub">Click <strong>Book on Turo</strong> to reserve, or <a href="#contact">contact us directly</a> for a deal.</p>
 
+
+         <!-- ===== VEHICLE CARD TEMPLATE: New Vehicle ===== -->
+        <!-- 
+            =====================================================
+            NEW VEHICLE TEMPLATE — Duplicate this block and update the content for each new vehicle you want to add. 
+             - Update the ID and image sources
+             - Choose the appropriate badge (luxury, economy, suv, sport)
+             - Fill in the vehicle details and specs
+             - Update the Turo booking link
+             - Remove this comment block when done
+            =====================================================
+        -->
+        <article class="vehicle-card" id="2020-mercedes-c300">
+            <div class="vehicle-gallery">
+                <div class="gallery-main">
+                    <img id="2020-mercedes-c300-main" src="https://example.com/2020-mercedes-c300-front.webp" alt="2020 Mercedes-Benz C300 exterior" />
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="/front.webp" alt="2020 Mercedes-Benz C300 view 1" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/driver-side.webp" alt="2020 Mercedes-Benz C300 view 2" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/rear.webp" alt="2020 Mercedes-Benz C300 view 3" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/passenger-rear.webp" alt="2020 Mercedes-Benz C300 view 4" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/passenger-side.webp" alt="2020 Mercedes-Benz C300 view 5" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/cockpit.webp" alt="2020 Mercedes-Benz C300 view 5" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/roof.jpg" alt="2020 Mercedes-Benz C300 view 5" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                    <img src="/dashboard.webp" alt="2020 Mercedes-Benz C300 view 5" onclick="swapImg('2020-mercedes-c300-main', this.src)" />
+                </div>
+            </div>
+            <div class="vehicle-info">
+                <div class="vehicle-header">
+                    <div>
+                        <!-- Badge options: luxury | economy | suv | sport -->
+                        <span class="vehicle-badge [luxury|economy|suv|sport]">[Luxury / Economy / SUV / Sport]</span>
+                        <h3 class="vehicle-name">2020 Mercedes-Benz C300</h3>
+                        <p class="vehicle-tagline">Sedan · [Drivetrain or Key Feature]</p>
+                    </div>
+                    <div class="vehicle-price">
+                        <span class="price-amount">~$65</span>
+                        <span class="price-unit">/day</span>
+                    </div>
+                </div>
+
+               <div class="spec-grid">
+                    <div class="spec-item"><span class="spec-icon">📱</span><span>Apple CarPlay &amp; Android Auto</span></div>
+                    <div class="spec-item"><span class="spec-icon">🌡</span><span>Front Seat Heaters</span></div>
+                    <div class="spec-item"><span class="spec-icon">☀️</span><span>Panoramic Sunroof</span></div>
+                    <div class="spec-item"><span class="spec-icon">🎵</span><span>Voice Assistant</span></div>
+                    <div class="spec-item"><span class="spec-icon">🅿️</span><span>Automated Parking &amp; Sensors</span></div>
+                    <div class="spec-item"><span class="spec-icon">👁</span><span>Blind Spot Monitor</span></div>
+                    <div class="spec-item"><span class="spec-icon">📡</span><span>Tilt/Telescopic Steering Wheel</span></div>
+                    <div class="spec-item"><span class="spec-icon">🔑</span><span>Smart Key</span></div>
+                </div>
+
+                <details class="full-specs">
+                    <summary>Full Feature List</summary>
+                    <p>Power Mirrors · AM/FM + AUX jack · 6 speakers · Leatherette Seats · Digital Display · Multifunction steering wheel · 
+                        CD/MP3 player · Trunk light · Power trunk · Memory Seats</p>
+                </details>
+
+                <div class="vehicle-actions">
+                    <a href="https://turo.com/us/en/car-rental/united-states/philadelphia-pa/mercedes-benz/c-class/3591378" target="_blank" rel="noopener" class="btn-book">Book on Turo</a>
+                    <a href="#contact" class="btn-contact">Contact Owner</a>
+                </div>
+            </div>
+        </article>
+        <!-- ===== END NEW VEHICLE TEMPLATE ===== -->
+
+
         <!-- ===== VEHICLE CARD: Mercedes C300 ===== -->
-        <article class="vehicle-card" id="mercedes">
+        <article class="vehicle-card" id="2016-mercedes-c300">
             <div class="vehicle-gallery">
                 <div class="gallery-main">
                     <img id="merc-main" src="https://images.turo.com/media/vehicle/images/WxvTSs8wQoW7xK27rRokDQ.1440x700.jpg" alt="2020 Mercedes-Benz C300 exterior" />
@@ -95,7 +163,7 @@
         </article>
 
         <!-- ===== VEHICLE CARD: Volkswagen Passat ===== -->
-        <article class="vehicle-card" id="passat">
+        <article class="vehicle-card" id="2012-vw-passat">
             <div class="vehicle-gallery">
                 <div class="gallery-main">
                     <img id="vw-main" src="https://images.turo.com/media/vehicle/images/vs0W1En6Q_ikaGT4gTegnA.1440x700.jpg" alt="Volkswagen Passat S exterior" />
@@ -142,68 +210,7 @@
             </div>
         </article>
 
-        <!-- ===== VEHICLE CARD TEMPLATE: New Vehicle ===== -->
-        <!-- 
-            =====================================================
-            NEW VEHICLE TEMPLATE — Copy this block for each new car.
-            Replace all placeholder values marked with [BRACKETS].
-            =====================================================
-        -->
-        <article class="vehicle-card" id="[vehicle-id]">
-            <div class="vehicle-gallery">
-                <div class="gallery-main">
-                    <img id="[img-id]-main" src="[MAIN_PHOTO_URL]" alt="[YEAR MAKE MODEL] exterior" />
-                </div>
-                <div class="gallery-thumbs">
-                    <img src="/front.webp" alt="[Car name] view 1" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/driver-side.webp" alt="[Car name] view 2" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/rear.webp" alt="[Car name] view 3" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/passenger-rear.webp" alt="[Car name] view 4" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/passenger-side.webp" alt="[Car name] view 5" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/cockpit.webp" alt="[Car name] view 5" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/roof.jpg" alt="[Car name] view 5" onclick="swapImg('[img-id]-main', this.src)" />
-                    <img src="/dashboard.webp" alt="[Car name] view 5" onclick="swapImg('[img-id]-main', this.src)" />
-                </div>
-            </div>
-            <div class="vehicle-info">
-                <div class="vehicle-header">
-                    <div>
-                        <!-- Badge options: luxury | economy | suv | sport -->
-                        <span class="vehicle-badge [luxury|economy|suv|sport]">[Luxury / Economy / SUV / Sport]</span>
-                        <h3 class="vehicle-name">2020 Mercedes-Benz C300</h3>
-                        <p class="vehicle-tagline">Sedan · [Drivetrain or Key Feature]</p>
-                    </div>
-                    <div class="vehicle-price">
-                        <span class="price-amount">~$65</span>
-                        <span class="price-unit">/day</span>
-                    </div>
-                </div>
-
-               <div class="spec-grid">
-                    <div class="spec-item"><span class="spec-icon">📱</span><span>Apple CarPlay &amp; Android Auto</span></div>
-                    <div class="spec-item"><span class="spec-icon">🌡</span><span>Front Seat Heaters</span></div>
-                    <div class="spec-item"><span class="spec-icon">☀️</span><span>Panoramic Sunroof</span></div>
-                    <div class="spec-item"><span class="spec-icon">🎵</span><span>Voice Assistant</span></div>
-                    <div class="spec-item"><span class="spec-icon">🅿️</span><span>Automated Parking &amp; Sensors</span></div>
-                    <div class="spec-item"><span class="spec-icon">👁</span><span>Blind Spot Monitor</span></div>
-                    <div class="spec-item"><span class="spec-icon">📡</span><span>Tilt/Telescopic Steering Wheel</span></div>
-                    <div class="spec-item"><span class="spec-icon">🔑</span><span>Smart Key</span></div>
-                </div>
-
-                <details class="full-specs">
-                    <summary>Full Feature List</summary>
-                    <p>Power Mirrors · AM/FM + AUX jack · 6 speakers · Leatherette Seats · Digital Display · Multifunction steering wheel · 
-                        CD/MP3 player · Trunk light · Power trunk · Memory Seats</p>
-                </details>
-
-                <div class="vehicle-actions">
-                    <a href="https://turo.com/us/en/car-rental/united-states/philadelphia-pa/mercedes-benz/c-class/3591378" target="_blank" rel="noopener" class="btn-book">Book on Turo</a>
-                    <a href="#contact" class="btn-contact">Contact Owner</a>
-                </div>
-            </div>
-        </article>
-        <!-- ===== END NEW VEHICLE TEMPLATE ===== -->
-
+       
     </main>
 
     <!-- ===== CONTACT ===== -->
