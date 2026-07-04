@@ -6,6 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EAG Autos, LLC – Philadelphia Car Rentals</title>
     <meta name="description" content="Rent premium and economy vehicles in Philadelphia, PA. EAG Autos offers luxury and affordable car rentals in the Wynnefield area." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.eagautos.net/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EAG Autos, LLC" />
+    <meta property="og:title" content="EAG Autos, LLC – Philadelphia Car Rentals" />
+    <meta property="og:description" content="Luxury and economy car rentals in Philadelphia, PA — rented directly from the owner. Mercedes-Benz, Volkswagen, and more. No hidden fees." />
+    <meta property="og:url" content="https://www.eagautos.net/" />
+    <meta property="og:image" content="https://www.eagautos.net/E350Front.avif" />
+    <meta property="og:image:alt" content="2020 Mercedes-Benz E350 available for rent from EAG Autos in Philadelphia" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EAG Autos, LLC – Philadelphia Car Rentals" />
+    <meta name="twitter:description" content="Luxury and economy car rentals in Philadelphia, PA — rented directly from the owner. No hidden fees." />
+    <meta name="twitter:image" content="https://www.eagautos.net/E350Front.avif" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRental",
+      "name": "EAG Autos, LLC",
+      "url": "https://www.eagautos.net/",
+      "telephone": "+1-443-649-7679",
+      "email": "eagandong00@gmail.com",
+      "priceRange": "$45–$80 per day",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "postalCode": "19131",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Philadelphia"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9756,
+        "longitude": -75.2216
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -323,18 +370,36 @@
             <div class="contact-card">
                 <span class="contact-icon">✉️</span>
                 <h4>Email</h4>
-                <p><a href="mailto:">eagandong00@gmail.com</a></p>
+                <p><a href="mailto:eagandong00@gmail.com">eagandong00@gmail.com</a></p>
             </div>
             <div class="contact-card">
                 <span class="contact-icon">📞</span>
                 <h4>Phone / Text</h4>
-                <p><a href="tel:">443-649-7679</a></p>
+                <p><a href="tel:+14436497679">443-649-7679</a></p>
             </div>
         </div>
     </section>
 
+    <!-- ===== LOCATION / MAP ===== -->
+    <section id="location" class="location-section">
+        <h2 class="section-title">Where We Are</h2>
+        <p class="section-sub">Based in Wynnefield, Philadelphia — minutes from City Ave, Bala Cynwyd, and a short ride from PHL Airport. Exact pickup address provided at booking.</p>
+        <div class="map-wrap">
+            <iframe
+                src="https://www.google.com/maps?q=Wynnefield,+Philadelphia,+PA+19131&output=embed"
+                width="100%"
+                height="400"
+                style="border:0; border-radius:12px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="EAG Autos service area — Wynnefield, Philadelphia PA">
+            </iframe>
+        </div>
+    </section>
+
     <!-- ===== FOOTER ===== -->
-    <footer id="location" class="site-footer">
+    <footer class="site-footer">
         <p class="footer-brand">EAG Autos, LLC</p>
         <p>Philadelphia, PA 19131 &nbsp;·&nbsp; Wynnefield</p>
         <p class="footer-copy">&copy; <span id="year"></span> EAG Autos, LLC. All rights reserved.</p>

@@ -512,3 +512,23 @@ details[open] summary::before { content: '− '; }
     .vehicle-price { text-align: left; }
     .price-amount { font-size: 1.6rem; }
 }
+
+/* ===== LOCATION / MAP SECTION ===== */
+.location-section {
+    padding: 72px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.map-wrap {
+    margin-top: 32px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0; /* removes iframe bottom gap */
+}
+
+@media (max-width: 768px) {
+    .location-section { padding: 48px 16px; }
+    .map-wrap iframe { height: 300px; }
+}
